@@ -1,0 +1,117 @@
+html,body{
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+/* Clear */
+.clear{
+    display:block;
+    clear:both;
+}
+/* Block */
+.block{
+    display:block;
+}
+/* Hide */
+.hide{
+    display:none;
+    visibility:hidden;
+}
+
+/* Horizontal Menu */
+.hmenu ul{
+    list-style-type:none;
+    margin:0px;
+    display:block;
+}
+.hmenu ul li{
+    float:left;
+    display:inline;
+    clear:none;
+    vertical-align:middle;
+    width:auto;
+}
+.hmenu ul li a{
+    display:block;
+    padding: 2px 5px;
+    text-decoration:none;
+}
+.hmenu ul li a:hover{
+    text-decoration:underline;
+}
+
+
+/* Vertical Menu */
+.vmenu ul{
+    list-style-type:none;
+    margin:0px;
+    display:block;
+}
+.vmenu ul li{
+    float:left;
+    vertical-align:middle;
+    width:auto;
+    clear:both;
+    display:block;
+}
+.vmenu ul li a{
+    display:block;
+    padding: 2px 5px;
+    text-decoration:none;
+    width:100%;
+}
+.vmenu ul li a:hover{
+    text-decoration:underline;
+    display:block;
+}
+
+.colauto{
+    width:auto;
+}
+
+.col10{
+    width:10%;
+}
+.col15{
+    width:15%;
+}
+.col20{
+    width:20%;
+}
+.col25{
+    width:25%;
+}
+.col30{
+    width:30%;
+}
+.col33{
+    width:33%;
+}
+.col40{
+    width:40%;
+}
+.col50{
+    width:50%;
+}
+.col60{
+    width:60% !important;
+}
+.col66{
+    width:66%;
+}
+.col70{
+    width:70%;
+}
+.col75{
+    width:75%;
+}
+.col80{
+    width:80%;
+}
+.col90{
+    width:90%;
+}
+.col100{
+    width:100%;
+}

@@ -1,0 +1,32 @@
+.u{
+  text-decoration:underline;
+}
+.b{
+    font-weight:bold;
+}
+.upper{
+    text-transform:uppercase;
+}
+.lower{
+    text-transform:lowercase;
+}
+.tcenter{
+    text-align:center;
+}
+.tleft{
+    text-align:left;
+}
+.tright{
+    text-align:left;
+}
+.center{
+    margin:auto;
+}
+.left{
+    float:left;
+    width:auto;
+}
+.right{
+    float:left;
+    width:auto;
+}

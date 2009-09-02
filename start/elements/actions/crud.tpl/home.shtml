@@ -1,0 +1,2 @@
+<a href="<?php echo [URL]; ?>[lTABLE]/listar">Listar</a>
+<a href="<?php echo [URL]; ?>[lTABLE]/editar">Cadastrar</a>

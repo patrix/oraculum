@@ -1,0 +1,5 @@
+    <div id="footer">
+        Oraculum Framework &copy; <?php echo date('Y'); ?>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<?php Oraculum_Views::loadview("header"); ?>
+<div id="all">
+<img src="<?php Oraculum_Views::layout("img"); ?>logo.jpg" alt="Oraculum Framework" title="Oraculum Framework" id="logo" />
+<div id="content">
+<h2>Oraculum Framework :: <em><?php echo PROJECT; ?></em> </h2>
+<em class="test">Testando... 1... 2... 3...</em>
+<p>
+<?php echo Oraculum_Text::saudacao(); ?>!<br />
+Agora s&atilde;o <?php echo date('H:m'); ?> e o projeto <em><?php echo PROJECT; ?></em> foi inicializado com sucesso!<br /><br />
+Esta &eacute; o projeto inicial de modelo do Oraculum Framework.<br />
+Para maiores informa&ccedil;&otilde;es sobre a utiliza&ccedil;&atilde;o do Oraculum Framework, acesse o site oficial do projeto:<br />
+<a href="http://code.google.com/p/oraculum-php/" target="_blank">http://code.google.com/p/oraculum-php/</a><br /><br />
+
+Ou acesse <a href="./start" style="color:#66f; font-weight:bold;">/start</a> para que o <em>Oraculum</em> auxilie no desenvolvimento do seu projeto ;)<br /><br />
+Oraculum Framework<br />
+<em>Um novo conceito em desenvolvimento Web</em>
+</p>
+</div>
+</div>
+<?php Oraculum_Views::loadview("footer");

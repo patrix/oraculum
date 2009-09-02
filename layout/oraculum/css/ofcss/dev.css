@@ -1,0 +1,17 @@
+body.dev{
+    background-image:url('../../img/layout.jpg');
+    background-repeat:no-repeat;
+    background-position:50% 0%;
+}
+.debug,.debug *{
+    border:1px dotted #444;
+}
+.debug1,.debug1 *{
+    border:1px solid #0f0 !important;
+}
+.debug2,.debug2 *{
+    border:1px solid #f00;
+}
+.debug3,.debug3 *{
+    border:1px solid #00f;
+}
