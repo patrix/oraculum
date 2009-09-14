@@ -4,10 +4,10 @@
     <div id="content">
         <h2>Oraculum Framework :: <em><?php echo PROJECT; ?></em> </h2>
         <?php
-            $mensagem="Est&aacute; &eacute; uma vers&atilde;o especial de desenvolvimento da<br />";
-            $mensagem.="vers&atilde;o <strong>0.1 beta</strong> do Oraculum Framework!<br />";
-            $mensagem.="Acompanhe a <a href=\"http://code.google.com/p/oraculum-php/wiki/DeficienciasAlpha\">Lista de Pend&ecirc;ncias</a>";
-            $mensagem.="<br /><br />Obrigado por colaborar com o Oraculum Framework,<br />voc&ecirc; ser&aacute; lembrado por este ato...";
+            $mensagem="Est&aacute; &eacute; uma vers&atilde;o especial de desenvolvimento da<br />\n";
+            $mensagem.="vers&atilde;o <strong>0.1 beta</strong> do Oraculum Framework!<br />\n";
+            $mensagem.="Acompanhe a <a href=\"http://code.google.com/p/oraculum-php/wiki/DeficienciasAlpha\">Lista de Pend&ecirc;ncias</a>\n";
+            $mensagem.="<br /><br />Obrigado por colaborar com o Oraculum Framework,<br />voc&ecirc; ser&aacute; lembrado por este ato...\n";
             alert($mensagem);
         ?>
         <br />
