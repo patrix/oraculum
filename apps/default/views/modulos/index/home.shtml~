@@ -1,0 +1,38 @@
+<?php Oraculum_Views::loadview("header"); ?>
+<div id="all">
+    <img src="<?php Oraculum_Views::layout("img"); ?>logo.jpg" alt="Oraculum Framework" title="Oraculum Framework" id="logo" />
+    <div id="content">
+        <h2>Oraculum Framework :: <em><?php echo PROJECT; ?></em> </h2>
+        <?php
+<<<<<<< HEAD:apps/default/views/modulos/index/home.shtml
+            $mensagem="Est&aacute; &eacute; uma vers&atilde;o especial de desenvolvimento da<br />\n";
+            $mensagem.="vers&atilde;o <strong>0.1 beta</strong> do Oraculum Framework!<br />\n";
+            $mensagem.="Acompanhe a <a href=\"http://code.google.com/p/oraculum-php/wiki/DeficienciasAlpha\">Lista de Pend&ecirc;ncias</a>\n";
+            $mensagem.="<br /><br />Obrigado por colaborar com o Oraculum Framework,<br />voc&ecirc; ser&aacute; lembrado por este ato...\n";
+=======
+            $mensagem="Est&aacute; &eacute; uma vers&atilde;o especial de desenvolvimento da<br />";
+            $mensagem.="vers&atilde;o <strong>0.1 beta</strong> do Oraculum Framework!<br />";
+            $mensagem.="Acompanhe a <a href=\"http://code.google.com/p/oraculum-php/wiki/DeficienciasAlpha\">Lista de Pend&ecirc;ncias</a>";
+            $mensagem.="<br /><br />Obrigado por colaborar com o Oraculum Framework,<br />voc&ecirc; ser&aacute; lembrado por este ato...";
+>>>>>>> 981295783f6fe169a4862dcc46add3424c0803a3:apps/default/views/modulos/index/home.shtml
+            alert($mensagem);
+        ?>
+        <br />
+        <p>
+        <?php echo Oraculum_Text::saudacao(); ?>!<br />
+        Agora s&atilde;o <?php echo date('H:m'); ?> e o projeto <em><?php echo PROJECT; ?></em> foi inicializado com sucesso!<br /><br />
+        Esta &eacute; o projeto inicial de modelo do Oraculum Framework.<br />
+        Para maiores informa&ccedil;&otilde;es sobre a utiliza&ccedil;&atilde;o do Oraculum Framework, acesse o site oficial do projeto:<br />
+        <a href="http://oraculumframework.wordpress.com/" target="_blank">http://oraculumframework.wordpress.com/</a><br /><br />
+
+        Ou acesse <a href="./start" style="color:#66f; font-weight:bold;">/start</a> para que o <em>Oraculum</em> auxilie no desenvolvimento do seu projeto ;)<br /><br />
+        Oraculum Framework<br />
+        <em>Um novo conceito em desenvolvimento Web</em>
+        </p>
+    </div>
+</div>
+<<<<<<< HEAD:apps/default/views/modulos/index/home.shtml
+<?php Oraculum_Views::loadview("footer");
+=======
+<?php Oraculum_Views::loadview("footer");
+>>>>>>> 981295783f6fe169a4862dcc46add3424c0803a3:apps/default/views/modulos/index/home.shtml

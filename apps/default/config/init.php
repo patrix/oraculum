@@ -18,20 +18,20 @@
   include_once("./library/core/Oraculum.php");
   Oraculum::load_all(); // Carregando Base do Oraculum
   Oraculum::start(); // Inicializando Oraculum
-  
+
   /* Descomente a linha abaixo para carregar os arquivos de traducao */
   //I18N::load();
-  
+
   /* Descomente a linha abaixo caso esteja utilizando algum Banco de Dados
      configurado com o Doctrine ORM */
   //include_once("./models/doctrine/".PROJECT.".php");
-  
+
   include_once("./controllers/Controller.php");
   include_once("./apps/".PROJECT."/controllers/modulos/index/home.php");
-  
+
   /* Descomente a linha abaixo caso esteja utilizando algum Banco de Dados
      configurado com o Doctrine ORM */
   //Doctrine::loadModels("./apps/".PROJECT."/models/entidades");
-  
+
   // Inicializando sessao
   init_sess();
