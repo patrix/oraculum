@@ -17,23 +17,28 @@
 class Oraculum_Logs extends Oraculum
 {
   // Funcao de exibicao de mensagens de erro
-  public static function alert($mensagem,$log=false)
+  public static function alert($mensagem, $log=false)
   {
-    $cod=time().rand();
-    echo "<div id=\"alert".$cod."\" name=\"msg\" style=\"";
-    echo "border:2px solid #456abc; background-color:#ffffe7; color:#000000; ";
-    echo "margin:auto; width:75%; margin-top:10px; text-align:center; ";
-    echo "padding:10px; padding-top:0px; font-family: 'Times New Roman', ";
-    echo "serif; font-style:italic;\">\n";
-    echo "<div style=\"float:right; width:100%; text-align:right; ";
-    echo "clear:both;\">\n";
-    echo "<a href=\"#alert".$cod."\" onclick=\"";
-    echo "document.getElementById('alert".$cod."').style.display='none';\" ";
-    echo "style=\"color: #aa0000; font-size: 1em; text-decoration: none;\" ";
-    echo "title=\"Fechar\">x</a></div>";
-    echo "\n".utf8_decode($mensagem)."\n";
-    echo "</div>\n";
-
+  	if (PROFILER) {
+  		if (class_exists("Console")) {
+  		    Console::log($mensagem);
+  		}
+  	} else {
+	    $cod=time().rand();
+	    echo "<div id=\"alert".$cod."\" style=\"";
+	    echo "border:2px solid #456abc; background-color:#ffffe7; color:#000000; ";
+	    echo "margin:auto; width:75%; margin-top:10px; text-align:center; ";
+	    echo "padding:10px; padding-top:0px; font-family: 'Times New Roman', ";
+	    echo "serif; font-style:italic;\">\n";
+	    echo "<div style=\"float:right; width:100%; text-align:right; ";
+	    echo "clear:both;\">\n";
+	    echo "<a href=\"#alert".$cod."\" onclick=\"";
+	    echo "document.getElementById('alert".$cod."').style.display='none';\" ";
+	    echo "style=\"color: #aa0000; font-size: 1em; text-decoration: none;\" ";
+	    echo "title=\"Fechar\">x</a></div>";
+	    echo "\n".utf8_decode($mensagem)."\n";
+	    echo "</div>\n";
+  	}
     if ((NLOGS==2)||(NLOGS==3)||($log)) {
       gravalog('001', $mensagem); // Grava em log o Alerta
     }

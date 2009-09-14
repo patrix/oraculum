@@ -16,11 +16,11 @@
 
 class Oraculum_Views extends Oraculum
 {
-  public static function layout($tipo, $autoreturn=true)
+  public static function layout($tipo, $autoreturn=true, $project=PROJECT)
   {
     $tipo=((($tipo=="css")||($tipo=="img")||($tipo=="js")||($tipo=="swf"))?
     $tipo:null);
-    $layout=BASE_URL."layout/".PROJECT."/".$tipo."/";
+    $layout=BASE_URL."layout/".$project."/".$tipo."/";
     if ($autoreturn) {
       echo $layout;
     } else {

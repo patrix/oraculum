@@ -168,12 +168,17 @@ class Oraculum_Text extends Oraculum
 	    );
         return preg_replace(array_values($acentos), array_keys($acentos), $string);
     }
-    public static function t($constant)
+    public static function t($constant, $autoreturn=true)
     {
-        echo constant($constant);
+    	if ($autoreturn) {
+            echo constant($constant);
+            return null;
+    	} else {
+            return constant($constant);
+    	}
     }
-    public static function lang($constant)
+    public static function lang($constant, $autoreturn=true)
     {
-        Oraculum_Text::t("LANG_".strtoupper($constant));
+        return Oraculum_Text::t("LANG_".strtoupper($constant), $autoreturn);
     }
 }

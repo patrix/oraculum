@@ -44,12 +44,25 @@ class Oraculum
   }
   public static function load($modulo)
   {
-      $modulos=array("Crypt","Files","Forms","HTTP","Logs","Request","Test","Text","Views");
+      $modulos=array("Crypt","Files","Forms","HTTP","Logs","Request","Routes","Test","Text","Views");
       if (in_array($modulo, $modulos)) {
           $arquivo="./library/core/".$modulo.".php";
           if (file_exists($arquivo)) {
               include_once($arquivo);
           }
       }
+  }
+  public static function load_helper($helper)
+  {
+  	if (eregi("[a-z]", $helper)) {
+  		$arquivo="./library/components/".$helper.".php";
+        if (file_exists($arquivo)) {
+            include_once($arquivo);
+        } else if (DEBUG) {
+            alert('Voc&ecirc; tentou incluir um Helper que n&atilde;o existe!');
+        }
+  	} else if (DEBUG) {
+  		alert('Voc&ecirc; tentou incluir um Helper inv&aacute;lido!');
+  	}
   }
 }

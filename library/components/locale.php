@@ -56,12 +56,15 @@ class I18N
         }
         fclose($handle);
         if ((is_writable($langfile))||(!file_exists($langfile))) {
-          $file=fopen($langfile, 'w');
-          fwrite($file, $phplangfile);
-          I18N::load(); // Tenta recarregar o arquivo de Idioma (php) novamente
-          fclose($file);
-          if (DEBUG) {
-            alert("Arquivo de idioma gerado atraves de um arquivo CSV<br /><u>".$langfile."</u>");
+          if ($file=fopen($langfile, 'w')) {
+	          fwrite($file, $phplangfile);
+	          I18N::load(); // Tenta recarregar o arquivo de Idioma (php) novamente
+	          fclose($file);
+	          if (DEBUG) {
+	            alert("Arquivo de idioma gerado atraves de um arquivo CSV<br /><u>".$langfile."</u>");
+	          }
+          }else if (DEBUG) {
+          	alert("N&atilde;o foi poss&iacute;vel gerar o arquivo de idioma atrav&eacute;s do arquivo CSV<br /><u>".$langfile."</u>");
           }
           return true;
         } else {

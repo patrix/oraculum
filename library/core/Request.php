@@ -201,4 +201,8 @@ class Oraculum_Request extends Oraculum
   {
     return $_SERVER["REQUEST_URI"];
   }
+  public static function referer()
+  {
+    return $_SERVER["HTTP_REFERER"];
+  }
 }

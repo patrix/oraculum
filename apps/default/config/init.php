@@ -11,7 +11,7 @@
   define("SMTP_USER", "email"); // Usuario SMTP
   define("SMTP_PASS", "senha"); // Senha SMTP
   define("LANG", "pt_br"); // Idioma
-  define("NLOGS", 1); // Nivel de logs. 0: Nada. 1: Erros. 2: Alertas. 3: Tudo
+  define("NLOGS", 0); // Nivel de logs. 0: Nada. 1: Erros. 2: Alertas. 3: Tudo
   date_default_timezone_set("America/Sao_Paulo"); // Timezone
   include_once("./apps/".PROJECT."/config/workspaces/load.php"); // Carregando Workspaces
   include_once("./library/fs.php"); // Carregando funcoes gerais

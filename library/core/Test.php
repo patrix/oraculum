@@ -26,6 +26,16 @@ class Oraculum_Test extends Oraculum
     {
     }
 
+    public static function pqp()
+    {
+    	if (((int)DEBUG)&&(PROFILER)) {
+	    	define("DIR_PQP","./library/components/pqp/");
+	    	require_once(DIR_PQP.'classes/PhpQuickProfiler.php');
+	    	return new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
+    	} else {
+    		return null;
+    	}
+    }
     /**
      * @param classname string
      * @param methodname string

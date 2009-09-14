@@ -14,10 +14,13 @@
 	    set_error_handler('gravalog');
 	    //set_exception_handler('Oraculum_Logs::showException');
 	}
+	if (!file_exists(DIR_LOGS)) {
+		mkdir(DIR_LOGS);
+	}
   // Funcao para gravar logs
   function gravalog($numero,$texto,$pagina=null,$linha=null,$contexto=null)
   {
-    $ddf=fopen(DIR_LOGS.date('Y.M.d').".log", 'a');
+    $ddf=fopen(DIR_LOGS."/".date('Y.M.d').".log", 'a');
     if ($ddf) {
       $datalog=date('d.m.Y H:i:s');
       $txt="::[".$datalog."]--|".ip()."|----------------------\n";
@@ -29,6 +32,12 @@
         $txt.="Linha: ".$linha."\n";
       }
       $txt.="\n";
+      if (PROFILER) {
+      	if (class_exists("Console")) {
+	      	$e=new ErrorException($texto, 0, $numero, $pagina, $linha);
+	      	Console::logError($e, $texto);
+      	}
+      }
       if (fwrite($ddf, $txt)) {
         return true;
         if (DEBUG) {
